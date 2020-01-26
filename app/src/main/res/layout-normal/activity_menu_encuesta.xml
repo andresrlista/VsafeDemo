@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#000"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:transitionName="imageTransitionEncuesta"
+                android:src="@drawable/ic_people" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ENCUESTA"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_height="1dp"
+                android:background="#555" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos del Contribuyente"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="#333"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <EditText
+                    android:id="@+id/text_contribuyente_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Nombre(s) y Apellido(s)"
+                    android:inputType="text"
+                    android:background="@android:color/transparent"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="#333"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <EditText
+                    android:id="@+id/text_dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="D.N.I"
+                    android:inputType="number"
+                    android:background="@android:color/transparent"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="#333"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <EditText
+                    android:id="@+id/text_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Numero de Contacto"
+                    android:inputType="phone"
+                    android:textColor="#FFF"
+                    android:background="@android:color/transparent"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CUESTIONARIO"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="#333"
+            app:cardCornerRadius="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/encuesta_pregunta_1"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rating_bar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="16dp"
+                        android:background="#555"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/encuesta_pregunta_2"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rating_bar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="16dp"
+                        android:background="#555"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/encuesta_pregunta_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rating_bar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+
+                </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:elevation="8dp">
+        <Button
+            android:id="@+id/btn_enviar_encuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar"/>
+    </LinearLayout>
+
+        </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

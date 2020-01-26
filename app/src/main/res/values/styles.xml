@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="actionBarStyle">@style/Theme.MaterialComponents.NoActionBar</item>
+    </style>
+
+    <style name="AppThemeMain" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="actionBarStyle">@style/Theme.MaterialComponents.NoActionBar</item>
+        <item name="android:statusBarColor">#212121</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppThemeMain">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="actionBarStyle">@style/Theme.MaterialComponents.NoActionBar</item>
+    </style>
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="ThemeRatingBar" parent="AppThemeMain">
+        <item name="colorControlActivated">#FFF3E0</item>
+
+    </style>
+
+</resources>

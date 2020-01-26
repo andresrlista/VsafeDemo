@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#000"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="64dp"
+                android:src="@drawable/ic_assignment"
+                android:transitionName="imageTransitionRelevamiento"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/relevamiento"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="1dp"
+                android:background="#555" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="96dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="#333"
+            app:cardCornerRadius="8dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="false"
+                android:layout_marginBottom="76dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarSize="4dp"
+                android:scrollIndicators="top|bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Limpieza de la zona:"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_releva_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:numStars="5"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="16dp"
+                        android:background="#555"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calidad_del_transporte_p_blico"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_releva_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        style="@style/ThemeRatingBar"
+                        android:numStars="5"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="16dp"
+                        android:background="#555"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/flujo_de_contribuyentes_en_la_zona"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_releva_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:numStars="5"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="16dp"
+                        android:background="#555"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mantenimiento_de_plazas"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rb_releva_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:numStars="5"
+                        style="@style/ThemeRatingBar"
+                        android:isIndicator="false"
+                        android:stepSize="1"/>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:elevation="8dp">
+                <Button
+                    android:id="@+id/btn_enviar_relevamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enviar"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>
+
+

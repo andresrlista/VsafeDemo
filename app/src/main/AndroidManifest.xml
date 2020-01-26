@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anlisoft.vsafe">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".views.SplashScreenActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <!-- login activity -->
+        <activity
+            android:name=".views.LoginActivity"
+            android:theme="@style/AppThemeMain">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity> <!-- main activity -->
+        <activity
+            android:name=".views.MainActivity"
+            android:theme="@style/AppThemeMain" />
+        <!-- encuesta activity -->
+        <activity
+            android:name=".views.MenuEncuestaActivity"
+            android:theme="@style/AppThemeMain" /> <!-- relevamiento activity -->
+        <activity
+            android:name=".views.MenuRelevamientoActivity"
+            android:theme="@style/AppThemeMain" /> <!-- denuncia activity -->
+        <activity
+            android:name=".views.MenuDenunciaActivity"
+            android:theme="@style/AppThemeMain" /> <!-- begin loading screens -->
+        <activity
+            android:name=".views.EncuestaLoadScreenActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".views.DenunciaLoadScreenActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".views.RelevamientoLoadScreenActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".views.ReporteLoadScreenActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity android:name=".views.ReporteActivity" />
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+</manifest>

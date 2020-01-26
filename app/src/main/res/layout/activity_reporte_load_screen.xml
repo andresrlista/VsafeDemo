@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".views.ReporteLoadScreenActivity">
+
+
+    <ImageButton
+        android:id="@+id/img_reporte"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_show_chart"
+        android:transitionName="imageTransitionReporte" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No disponible."/>
+
+
+</LinearLayout>
