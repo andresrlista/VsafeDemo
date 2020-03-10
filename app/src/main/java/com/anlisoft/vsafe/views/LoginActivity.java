@@ -116,14 +116,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 AlertDialog.Builder buildDiag = new AlertDialog.Builder(LoginActivity.this);
                                 buildDiag.setTitle("Información:");
                                 buildDiag.setCancelable(false);
-                                buildDiag.setMessage("La ubicación de su dispositivo está desactivada.");
-                                buildDiag.setPositiveButton("Ir a Configuración Ahora", new DialogInterface.OnClickListener() {
+                                buildDiag.setMessage("La ubicación de su dispositivo(GPS) está desactivada.");
+                                buildDiag.setPositiveButton("Ir a la configuración", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                                         dialog.dismiss();
                                         finish();
                                     }
-                                }).setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+                                }).setNegativeButton("salir", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         finish();
@@ -193,12 +193,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     isEnabledUILogin(true);
                     customProgressDialog.dismissProgressDialog();
                     Snackbar.make(getWindow().getDecorView().getRootView(),
-                            "Error al iniciar sesión: usuario y contraseña no son válidos.",
+                            "Error al iniciar sesión: el usuario y contraseña no son válidos.",
                             Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
                             .setActionTextColor(ContextCompat.getColor(
                                     this, R.color.colorAccent))
                             .show();
-                    userLogin.setError("Ingrese un usuario válido");
+                    userLogin.setError("Ingrese un usuario válido.");
                     userPassword.setError("Ingrese una contraseña válida.");
                     break;
 
@@ -211,14 +211,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         buildDiag.setTitle("Información:");
                         buildDiag.setCancelable(false);
                         buildDiag.setMessage("La ubicación de su dispositivo está desactivada.\n" +
-                                "Active la ubicación para continuar ejecutando VSAFE. ");
-                        buildDiag.setPositiveButton("Ir a Configuración ahora", new DialogInterface.OnClickListener() {
+                                "Por favor, active la ubicación para continuar ejecutando Vsafe. ");
+                        buildDiag.setPositiveButton("Ir a configuración ahora", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                                 dialog.dismiss();
                                 finish();
                             }
-                        }).setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+                        }).setNegativeButton("salir", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 finish();
@@ -335,12 +335,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         gSessionManagerEditor.putBoolean(KEY_USERLOGGED, false).apply();
                     }
                     Snackbar.make(getWindow().getDecorView().getRootView(),
-                            "Error al iniciar sesión: usuario y/o contraseña no son válidos.",
-                            Snackbar.LENGTH_LONG).setAction("¿Registarse?", null)
+                            "Error al iniciar sesión: el usuario y/o contraseña no son válidos.",
+                            Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
                             .setActionTextColor(ContextCompat.getColor(
                                     LoginActivity.this, R.color.colorAccent))
                             .show();
-                    userLogin.setError("Ingrese un usuario válido");
+                    userLogin.setError("Ingrese un usuario válido.");
                     userPassword.setError("Ingrese una contraseña válida.");
                 }
             }
@@ -358,11 +358,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
                 Snackbar.make(getWindow().getDecorView().getRootView(),
                         "Error al iniciar sesión: compruebe su conexión a internet.",
-                        Snackbar.LENGTH_LONG).setAction("¿Registarse?", null)
+                        Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
                         .setActionTextColor(ContextCompat.getColor(
                                 LoginActivity.this, R.color.colorAccent))
                         .show();
-                userLogin.setError("Ingrese un usuario válido");
+                userLogin.setError("Ingrese un usuario válido.");
                 userPassword.setError("Ingrese una contraseña válida.");
 
             }

@@ -54,13 +54,12 @@ public class MenuDenunciaActivity
             text_denuncia_dni,
             text_denuncia_phone,
             text_denuncia_descripcion;
-    private ArrayAdapter categoriaDenuncia,
-            motivoDenuncia;
+    private ArrayAdapter categoriaDenuncia;
     private DenunciaCategoria categoriaSelected;
     private Motivo motivoSelected;
     private Spinner spinner_categoria,
             spinner_motivo;
-    private String mApiServiceUrl;
+
     private IServiceVsafe vsafeServices;
     private CustomProgressDialog customProgressDialogLoadCategorias;
     private Map<String, String> requestHeaders = new ArrayMap<>();
@@ -69,7 +68,7 @@ public class MenuDenunciaActivity
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_denuncia);
-        mApiServiceUrl = Global.BASE_URL_VISUALSAT_DEFAULT;
+        String mApiServiceUrl = Global.BASE_URL_VISUALSAT_DEFAULT;
         vsafeServices = ApiServiceVsafe.getAPIService(mApiServiceUrl);
 
         init_UIComponents();
@@ -172,7 +171,6 @@ public class MenuDenunciaActivity
                         Log.d("vsafe-demo", "onResponse: " + response.body().getMessage());
                     } else {
                         enableUI(true);
-                        Log.d("vsafe-demo", "onResponse-Error: " + response.body().getMessage());
                     }
                 }
             }
@@ -249,7 +247,6 @@ public class MenuDenunciaActivity
                             "Error al conectar con el servidor.",
                             2000)
                             .show();
-                    Log.d("vsafe-demo", "onResponse: " + response.body().getMessage());
                     enableUI(true);
                 }
             }
@@ -271,7 +268,7 @@ public class MenuDenunciaActivity
 
     private void updateMotivo(DenunciaMotivoResponse gMotivoDenunciaById) {
 
-        motivoDenuncia = new ArrayAdapter<>(MenuDenunciaActivity.this,
+        ArrayAdapter motivoDenuncia = new ArrayAdapter<>(MenuDenunciaActivity.this,
                 R.layout.spinner_categoria_text,
                 gMotivoDenunciaById.getMotivoResult());
         motivoDenuncia.setDropDownViewResource(R.layout.spinner_categoria_dropdown);

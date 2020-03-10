@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vsafe</string>
+    <string name="encuesta_pregunta_1">Security in the zone:</string>
+    <string name="encuesta_pregunta_2">Cleaning in the zone:</string>
+    <string name="encuesta_pregunta_3">Order and maintenance in the zone:</string>
+    <string name="mantenimiento_de_plazas">Maintenance of squares:</string>
+    <string name="flujo_de_contribuyentes_en_la_zona">People flow in the zone:</string>
+    <string name="calidad_del_transporte_p_blico">Quality of public transport:</string>
+    <string name="relevamiento">OBSERVATIONS</string>
+    <string name="enviar">Send</string>
+    <string name="user_login_data">USERLOGIN</string>
+    <string name="user_municipalidad">Municipality: </string>
+    <string name="text_btn_init_session">LOG IN</string>
+    <string name="image_profile_description">image profile description</string>
+    <string name="encuesta_description">image encuesta description</string>
+    <string name="btn_text_encuesta">POOL</string>
+    <string name="btn_text_relevamiento">OBSERVATIONS</string>
+    <string name="btn_img_relevamiento">boton imagen relevamiento</string>
+    <string name="btn_text_denuncia">CLAIM</string>
+    <string name="btn_text_reporte">REPORT</string>
+    <string name="img_denuncia_description">imagen boton denuncia</string>
+    <string name="btn_text_iniciar_sesion">LOGIN</string>
+    <string name="btn_text_init_session">LOGIN</string>
+</resources>
