@@ -73,10 +73,10 @@ public class MainActivity extends AppCompatActivity
                     if (!connection.getIsConnected()) {
 
                             AlertDialog.Builder buildDiag = new AlertDialog.Builder(MainActivity.this);
-                            buildDiag.setTitle("Información:");
+                            buildDiag.setTitle(getString(R.string.diag_title_info));
                             buildDiag.setCancelable(false);
-                            buildDiag.setMessage("No hay una conexión de datos disponible.\n");
-                            buildDiag.setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+                            buildDiag.setMessage(getString(R.string.diag_msgbody_internet_not_available));
+                            buildDiag.setPositiveButton(getString(R.string.diag_btn_close), new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
                                     finish();
@@ -104,10 +104,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         AlertDialog.Builder buildDiag = new AlertDialog.Builder(MainActivity.this);
-        buildDiag.setTitle("Información:");
+        buildDiag.setTitle(getString(R.string.diag_title_info));
         buildDiag.setCancelable(false);
-        buildDiag.setMessage("¿Desea Cerrar Sesión?\n");
-        buildDiag.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+        buildDiag.setMessage(getString(R.string.diag_msgbody_quit_session));
+        buildDiag.setPositiveButton(getString(R.string.diag_btn_yes), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Global.gRetrofit = null;
                 gSessionManagerEditor = gSessionManager.edit();
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity
                 dialog.dismiss();
                 finish();
             }
-        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+        }).setNegativeButton(getString(R.string.diag_btn_no), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity
                 concat(" ")
                 .concat(userData.getLastName()));
         StringBuilder sb = new StringBuilder();
-        sb.append("Municipalidad: ").append(gSessionManager.getString(KEY_MUNICIPALIDAD_NAME, "..."));
+        sb.append(getString(R.string.user_municipalidad)).append(gSessionManager.getString(KEY_MUNICIPALIDAD_NAME, "..."));
         text_location.setText(sb);
     }
 

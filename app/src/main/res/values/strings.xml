@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- GENERAL -->
+
+    <!-- General -->
     <string name="app_name">Vsafe</string>
     <string name="user_login_data">USERLOGIN</string>
     <string name="btn_text_register">Registrar</string>
@@ -9,6 +10,32 @@
     <string name="img_encuesta_description">image pool description</string>
     <string name="btn_image_observation">buttom image observations</string>
     <string name="img_denuncia_description">image button reclaim</string>
+    <string name="sb_btn_register">Registrarse</string>
+    <string name="menu_subtitle_people">Datos del Contribuyente</string>
+    <string name="menu_subtitle_question">CUESTIONARIO</string>
+
+
+    <!-- Messages & Errors-->
+    <string name="login_error_001">Error al descargar datos del servidor.</string>
+    <string name="login_error_002">Error al iniciar sesión: usuario no válido.</string>
+    <string name="login_error_003">Ingrese un usuario válido.</string>
+    <string name="login_error_004">Error al iniciar sesión: contraseña no válida.</string>
+    <string name="login_error_005">Ingrese una contraseña válida.</string>
+    <string name="login_error_006">Error: usuario/contraseña no son válidos.</string>
+
+
+    <!-- Dialog Messages -->
+    <string name="diag_title_info">Información</string>
+    <string name="diag_msgbody_gps_not_available">La ubicación de su dispositivo(GPS) está desactivada.</string>
+    <string name="diag_msgbody_go_settings">Ir a la configuración</string>
+    <string name="diag_msgbody_connecting_server">Conectando con el servidor.</string>
+    <string name="diag_msgbody_internet_not_available">No hay conexión a internet.</string>
+    <string name="diag_btn_exit">Salir</string>
+    <string name="diag_btn_yes">Sí</string>
+    <string name="diag_btn_no">No</string>
+    <string name="diag_msgbody_quit_session">¿Desea salir de la sesión?</string>
+    <string name="diag_btn_close">Close</string>
+    <string name="sb_msg_select_municipality">Por favor, seleccione una municipalidad.</string>
 
     <!-- login activity -->
     <string name="txt_usuario">Usuario</string>
@@ -42,5 +69,8 @@
     <string name="tv_reclaim_menu_title">DENUNCIA</string>
     <string name="sp_category_title">Seleccione una categoria:</string>
     <string name="sp_reason_title">Seleccione un motivo:</string>
-    <string name="et_reclaim_description">Describa su reclamo</string>
+    <string name="et_reclaim_description">Describa su categoria</string>
+    <string name="tv_reclaim_category">Seleccione categoria</string>
+    <string name="tv_reclaim_reason">Seleccione motivo</string>
+
 </resources>

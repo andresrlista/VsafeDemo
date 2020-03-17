@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Datos del Contribuyente"
+                android:text="@string/menu_subtitle_people"
                 android:textSize="16sp"
                 android:textAlignment="center" />
 
@@ -175,7 +175,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="CUESTIONARIO"
+        android:text="@string/menu_subtitle_question"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#FFF"

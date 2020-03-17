@@ -106,12 +106,12 @@ public class SplashScreenActivity extends AppCompatActivity {
                                                 if (municipalidadResponse == null) {
                                                     gMunicipalidadesListado.clear();
                                                     Municipalidad municipalidadListadoDefault = new Municipalidad();
-                                                    municipalidadListadoDefault.setDescription("Seleccione Municipalidad:");
+                                                    municipalidadListadoDefault.setDescription("Error al descargar datos");
                                                     gMunicipalidadesListado.add(0, municipalidadListadoDefault);
                                                 } else {
                                                     gMunicipalidadesListado.clear();
                                                     Municipalidad municipalidadListadoDefault = new Municipalidad();
-                                                    municipalidadListadoDefault.setDescription("Seleccione Municipalidad:");
+                                                    municipalidadListadoDefault.setDescription(getString(R.string.sp_text_municipalidad));
                                                     gMunicipalidadesListado.add(0, municipalidadListadoDefault);
                                                     gMunicipalidadesListado.addAll(municipalidadResponse.getMunicipalidad());
                                                 }
@@ -145,10 +145,10 @@ public class SplashScreenActivity extends AppCompatActivity {
                     } else {
                         pbLoad.setVisibility(View.GONE);
                         AlertDialog.Builder buildDiag = new AlertDialog.Builder(SplashScreenActivity.this);
-                        buildDiag.setTitle("Información:");
+                        buildDiag.setTitle(getString(R.string.diag_title_info));
                         buildDiag.setCancelable(false);
-                        buildDiag.setMessage("No hay una conexión de datos disponible.\n");
-                        buildDiag.setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+                        buildDiag.setMessage(getString(R.string.diag_msgbody_internet_not_available));
+                        buildDiag.setPositiveButton(getString(R.string.diag_btn_close), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
                                 finish();
@@ -202,8 +202,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                 finish();
                 pbLoad.setVisibility(View.GONE);
                 Snackbar.make(getWindow().getDecorView().getRootView(),
-                        "Sin conexión a internet.",
-                        Snackbar.LENGTH_LONG).setAction("Cerrar", new View.OnClickListener() {
+                        getString(R.string.diag_msgbody_internet_not_available),
+                        Snackbar.LENGTH_LONG).setAction(getString(R.string.diag_btn_close), new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         finish();

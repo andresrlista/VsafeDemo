@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 serverLocation = gMunicipalidadesListado.get(position).getDescription();
 
                 Log.d("vsafe-demo", "onItemSelected: " + serverLocation);
-                if (!gMunicipalidadesListado.get(position).getDescription().equals(String.valueOf(R.string.sp_text_municipalidad))) {
+                if (position > 0) {
                     Global.BASE_URL_CURRENT = gMunicipalidadesListado.get(position).getBaseurl() + ":" +
                             gMunicipalidadesListado.get(position).getPort().toString() +
                             "/" + gMunicipalidadesListado.get(position).getApi() + "/";
@@ -114,16 +114,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 // Call your Alert message
                                 isEnabledUILogin(false);
                                 AlertDialog.Builder buildDiag = new AlertDialog.Builder(LoginActivity.this);
-                                buildDiag.setTitle("Información:");
+                                buildDiag.setTitle(R.string.diag_title_info);
                                 buildDiag.setCancelable(false);
-                                buildDiag.setMessage("La ubicación de su dispositivo(GPS) está desactivada.");
-                                buildDiag.setPositiveButton("Ir a la configuración", new DialogInterface.OnClickListener() {
+                                buildDiag.setMessage(getString(R.string.diag_msgbody_gps_not_available));
+                                buildDiag.setPositiveButton(getString(R.string.diag_msgbody_go_settings), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                                         dialog.dismiss();
                                         finish();
                                     }
-                                }).setNegativeButton("salir", new DialogInterface.OnClickListener() {
+                                }).setNegativeButton(getString(R.string.diag_btn_exit), new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         finish();
@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             userLoginRequest.setLogin(userLogin.getText().toString());
             userLoginRequest.setPassword(userPassword.getText().toString());
             customProgressDialog.showDialogWithMsg(
-                    "Conectando con el servidor ..."
+                    getString(R.string.diag_msgbody_connecting_server)
             );
 
             UserDataValidator userDataValidator = new UserDataValidator(userLoginRequest);
@@ -163,20 +163,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     customProgressDialog.dismissProgressDialog();
                     isEnabledUILogin(true);
                     Snackbar.make(getWindow().getDecorView().getRootView(),
-                            "Error al iniciar sesión: usuario no válido.",
-                            Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
+                            getString(R.string.login_error_002),
+                            Snackbar.LENGTH_LONG).setAction(getString(R.string.btn_text_register), null)
                             .setActionTextColor(ContextCompat.getColor(
                                     this, R.color.colorAccent))
                             .show();
-                    userLogin.setError("Ingrese un usuario válido");
+                    userLogin.setError(getString(R.string.login_error_003));
                     break;
 
                 case Global.PASSWORD_NOT_VALID:
                     isEnabledUILogin(true);
                     customProgressDialog.dismissProgressDialog();
                     Snackbar.make(getWindow().getDecorView().getRootView(),
-                            "Error al iniciar sesión: contraseña no válida.",
-                            Snackbar.LENGTH_LONG).setAction("¿Registrarse?",
+                            getString(R.string.login_error_004),
+                            Snackbar.LENGTH_LONG).setAction(getString(R.string.btn_text_register),
                             new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -186,20 +186,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             .setActionTextColor(ContextCompat.getColor(
                                     this, R.color.colorAccent))
                             .show();
-                    userPassword.setError("Ingrese una contraseña válida.");
+                    userPassword.setError(getString(R.string.login_error_005));
                     break;
 
                 case Global.USERLOGIN_PASSWORD_NOT_VALID:
                     isEnabledUILogin(true);
                     customProgressDialog.dismissProgressDialog();
                     Snackbar.make(getWindow().getDecorView().getRootView(),
-                            "Error al iniciar sesión: el usuario y contraseña no son válidos.",
-                            Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
+                            getString(R.string.login_error_006),
+                            Snackbar.LENGTH_LONG).setAction(getString(R.string.btn_text_register), null)
                             .setActionTextColor(ContextCompat.getColor(
                                     this, R.color.colorAccent))
                             .show();
-                    userLogin.setError("Ingrese un usuario válido.");
-                    userPassword.setError("Ingrese una contraseña válida.");
+                    userLogin.setError(getString(R.string.login_error_003));
+                    userPassword.setError(getString(R.string.login_error_005));
                     break;
 
                 case Global.USERLOGIN_PASSWORD_VALID:
@@ -208,17 +208,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         // Call your Alert message
                         isEnabledUILogin(false);
                         AlertDialog.Builder buildDiag = new AlertDialog.Builder(LoginActivity.this);
-                        buildDiag.setTitle("Información:");
+                        buildDiag.setTitle(getString(R.string.diag_title_info));
                         buildDiag.setCancelable(false);
-                        buildDiag.setMessage("La ubicación de su dispositivo está desactivada.\n" +
-                                "Por favor, active la ubicación para continuar ejecutando Vsafe. ");
-                        buildDiag.setPositiveButton("Ir a configuración ahora", new DialogInterface.OnClickListener() {
+                        buildDiag.setMessage(getString(R.string.diag_msgbody_gps_not_available));
+                        buildDiag.setPositiveButton(getString(R.string.diag_msgbody_go_settings), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                                 dialog.dismiss();
                                 finish();
                             }
-                        }).setNegativeButton("salir", new DialogInterface.OnClickListener() {
+                        }).setNegativeButton(getString(R.string.diag_btn_exit), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 finish();
@@ -237,7 +236,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         } else {
             Snackbar.make(getWindow().getDecorView().getRootView(),
-                    "Por favor, seleccione una municipalidad.",
+                    getString(R.string.sb_msg_select_municipality),
                     Snackbar.LENGTH_LONG)
                     .show();
         }
@@ -335,13 +334,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         gSessionManagerEditor.putBoolean(KEY_USERLOGGED, false).apply();
                     }
                     Snackbar.make(getWindow().getDecorView().getRootView(),
-                            "Error al iniciar sesión: el usuario y/o contraseña no son válidos.",
-                            Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
+                            getString(R.string.login_error_006),
+                            Snackbar.LENGTH_LONG).setAction(getString(R.string.btn_text_register), null)
                             .setActionTextColor(ContextCompat.getColor(
                                     LoginActivity.this, R.color.colorAccent))
                             .show();
-                    userLogin.setError("Ingrese un usuario válido.");
-                    userPassword.setError("Ingrese una contraseña válida.");
+                    userLogin.setError(getString(R.string.login_error_003));
+                    userPassword.setError(getString(R.string.login_error_005));
                 }
             }
 
@@ -357,13 +356,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     gSessionManagerEditor.putBoolean(KEY_USERLOGGED, false).apply();
                 }
                 Snackbar.make(getWindow().getDecorView().getRootView(),
-                        "Error al iniciar sesión: compruebe su conexión a internet.",
-                        Snackbar.LENGTH_LONG).setAction("¿Registrarse?", null)
+                        getString(R.string.diag_msgbody_internet_not_available),
+                        Snackbar.LENGTH_LONG).setAction(getString(R.string.btn_text_register), null)
                         .setActionTextColor(ContextCompat.getColor(
                                 LoginActivity.this, R.color.colorAccent))
                         .show();
-                userLogin.setError("Ingrese un usuario válido.");
-                userPassword.setError("Ingrese una contraseña válida.");
+                userLogin.setError(getString(R.string.login_error_003));
+                userPassword.setError(getString(R.string.login_error_005));
 
             }
         });
