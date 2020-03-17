@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- GENERAL -->
     <string name="app_name">Vsafe</string>
-    <string name="encuesta_pregunta_1">Security in the zone:</string>
-    <string name="encuesta_pregunta_2">Cleaning in the zone:</string>
-    <string name="encuesta_pregunta_3">Order and maintenance in the zone:</string>
-    <string name="mantenimiento_de_plazas">Maintenance of squares:</string>
-    <string name="flujo_de_contribuyentes_en_la_zona">People flow in the zone:</string>
-    <string name="calidad_del_transporte_p_blico">Quality of public transport:</string>
-    <string name="relevamiento">OBSERVATIONS</string>
-    <string name="enviar">Send</string>
     <string name="user_login_data">USERLOGIN</string>
+    <string name="btn_text_register">Register</string>
     <string name="user_municipalidad">Municipality: </string>
-    <string name="text_btn_init_session">LOG IN</string>
-    <string name="image_profile_description">image profile description</string>
-    <string name="encuesta_description">image encuesta description</string>
+    <string name="img_profile_description">image profile description</string>
+    <string name="img_encuesta_description">image pool description</string>
+    <string name="btn_image_observation">buttom image observations</string>
+    <string name="img_denuncia_description">image button reclaim</string>
+
+    <!-- login activity -->
+    <string name="txt_usuario">Username</string>
+    <string name="txt_pass">Password</string>
+    <string name="btn_text_login">LOGIN</string>
+    <string name="sp_text_municipalidad">Select Municipality:</string>
+
+    <!-- main menu activity -->
+    <string name="tv_username_profile">USERNAME</string>
     <string name="btn_text_encuesta">POOL</string>
     <string name="btn_text_relevamiento">OBSERVATIONS</string>
-    <string name="btn_img_relevamiento">boton imagen relevamiento</string>
-    <string name="btn_text_denuncia">CLAIM</string>
+    <string name="btn_text_denuncia">RECLAIM</string>
     <string name="btn_text_reporte">REPORT</string>
-    <string name="img_denuncia_description">imagen boton denuncia</string>
-    <string name="btn_text_iniciar_sesion">LOGIN</string>
-    <string name="btn_text_init_session">LOGIN</string>
+
+    <!-- menu encuesta/pool -->
+    <string name="et_name">First and last name</string>
+    <string name="et_id">Identification number</string>
+    <string name="et_phone">Phone number</string>
+    <string name="pool_q1">Security in the zone:</string>
+    <string name="pool_q2">Cleaning in the zone:</string>
+    <string name="pool_q3">Order and maintenance in the zone:</string>
+
+    <!-- menu relevamiento/observations -->
+    <string name="tv_observations_menu_title">OBSERVATIONS</string>
+    <string name="observation_q1">Area cleanliness:</string>
+    <string name="observation_q2">Quality of public transport:</string>
+    <string name="observation_q3">People flow in the zone:</string>
+    <string name="observation_q4">Maintenance of squares:</string>
+
+    <!-- menu denuncia/reclaim -->
+    <string name="tv_reclaim_menu_title">RECLAIM</string>
+    <string name="sp_category_title">Select a category:</string>
+    <string name="sp_reason_title">Select a reason:</string>
+    <string name="et_reclaim_description">Describe your reclaim</string>
+
 </resources>

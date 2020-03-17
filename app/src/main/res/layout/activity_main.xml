@@ -39,7 +39,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat"
-            android:text="USERNAME"
+            android:text="@string/tv_username_profile"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/montserrat"
-            android:text="UBICACION"
+            android:text="@string/user_municipalidad"
             android:textColor="#FFF"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="ENCUESTA"
+                    android:text="@string/btn_text_encuesta"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="RELEVAMIENTO"
+                    android:text="@string/btn_text_relevamiento"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -190,7 +190,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="DENUNCIA"
+                    android:text="@string/btn_text_denuncia"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -234,7 +234,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="REPORTE"
+                    android:text="@string/btn_text_reporte"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textStyle="bold" />

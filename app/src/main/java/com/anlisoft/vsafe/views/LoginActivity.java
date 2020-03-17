@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 serverLocation = gMunicipalidadesListado.get(position).getDescription();
 
                 Log.d("vsafe-demo", "onItemSelected: " + serverLocation);
-                if (!gMunicipalidadesListado.get(position).getDescription().equals("Seleccione Municipalidad:")) {
+                if (!gMunicipalidadesListado.get(position).getDescription().equals(String.valueOf(R.string.sp_text_municipalidad))) {
                     Global.BASE_URL_CURRENT = gMunicipalidadesListado.get(position).getBaseurl() + ":" +
                             gMunicipalidadesListado.get(position).getPort().toString() +
                             "/" + gMunicipalidadesListado.get(position).getApi() + "/";

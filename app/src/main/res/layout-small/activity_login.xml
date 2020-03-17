@@ -38,8 +38,8 @@
                     android:drawableStart="@drawable/ic_user"
                     android:drawablePadding="8dp"
                     android:fontFamily="@font/montserrat"
-                    android:textSize="8sp"
-                    android:hint="Ingrese usuario"
+                    android:textSize="12sp"
+                    android:hint="@string/txt_usuario"
                     android:inputType="text"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp"
@@ -53,8 +53,8 @@
                     android:drawableStart="@drawable/ic_key_password"
                     android:drawablePadding="8dp"
                     android:fontFamily="@font/montserrat"
-                    android:textSize="8sp"
-                    android:hint="Ingrese contraseña"
+                    android:textSize="12sp"
+                    android:hint="@string/txt_pass"
                     android:inputType="textPassword"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp"
@@ -67,9 +67,9 @@
                     android:layout_height="wrap_content"
                     android:elevation="4dp"
                     android:layout_marginTop="4dp"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
-                    android:text="INGRESAR" />
+                    android:text="@string/btn_text_register" />
 
             </LinearLayout>
 

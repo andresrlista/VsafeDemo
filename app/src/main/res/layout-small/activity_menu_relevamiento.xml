@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/relevamiento"
+                android:text="@string/tv_observations_menu_title"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textAlignment="center" />
@@ -80,7 +80,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Limpieza de la zona:"
+                        android:text="@string/observation_q1"
                         android:textSize="12sp"
                         android:textStyle="bold"/>
 
@@ -103,7 +103,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/calidad_del_transporte_p_blico"
+                        android:text="@string/observation_q2"
                         android:textSize="12sp"
                         android:textStyle="bold"/>
 
@@ -126,7 +126,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/flujo_de_contribuyentes_en_la_zona"
+                        android:text="@string/observation_q3"
                         android:textSize="12sp"
                         android:textStyle="bold"/>
 
@@ -149,7 +149,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/mantenimiento_de_plazas"
+                        android:text="@string/observation_q4"
                         android:textSize="12sp"
                         android:textStyle="bold"/>
 
@@ -181,7 +181,7 @@
                     android:id="@+id/btn_enviar_relevamiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enviar"/>
+                    android:text="@string/btn_text_register"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>

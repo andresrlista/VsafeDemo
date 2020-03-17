@@ -68,7 +68,7 @@
                         android:drawablePadding="8dp"
                         android:fontFamily="@font/montserrat"
                         android:textSize="16sp"
-                        android:hint="Usuario"
+                        android:hint="@string/txt_usuario"
                         android:padding="8dp"
                         android:layout_marginBottom="16dp"
                         android:inputType="text"
@@ -85,7 +85,7 @@
                         android:padding="8dp"
                         android:fontFamily="@font/montserrat"
                         android:textSize="16sp"
-                        android:hint="Contraseña"
+                        android:hint="@string/txt_pass"
                         android:inputType="textPassword"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
@@ -100,7 +100,7 @@
                     android:layout_marginTop="32dp"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:text="@string/btn_text_init_session"/>
+                    android:text="@string/btn_text_register"/>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

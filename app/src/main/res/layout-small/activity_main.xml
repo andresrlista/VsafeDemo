@@ -23,7 +23,7 @@
             android:layout_marginEnd="32dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_settings"
-            android:contentDescription="@string/image_profile_description" />
+            android:contentDescription="@string/img_profile_description" />
 
         <ImageView
             android:id="@+id/img_userprofile"
@@ -42,7 +42,7 @@
             android:layout_marginTop="2dp"
             android:textSize="12sp"
             android:fontFamily="@font/montserrat"
-            android:text="USERNAME"
+            android:text="@string/tv_username_profile"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             android:textStyle="bold" />
 
@@ -54,7 +54,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="2dp"
             android:fontFamily="@font/montserrat"
-            android:text="UBICACION"
+            android:text="@string/user_municipalidad"
             android:textColor="#FFF"
             android:textSize="10sp"
             android:textStyle="bold" />
@@ -98,7 +98,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_people"
                     android:transitionName="imageTransitionEncuesta"
-                    android:contentDescription="@string/encuesta_description" />
+                    android:contentDescription="@string/btn_text_encuesta" />
 
                 <TextView
                     android:id="@+id/txt_encuesta"
@@ -142,7 +142,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_assignment"
                     android:transitionName="imageTransitionRelevamiento"
-                    android:contentDescription="@string/btn_img_relevamiento" />
+                    android:contentDescription="@string/btn_text_relevamiento" />
 
                 <TextView
                     android:id="@+id/txt_relevamiento"
@@ -187,7 +187,7 @@
                     android:scaleType="fitXY"
                     android:transitionName="imageTransitionDenuncia"
                     android:src="@drawable/ic_add_alert"
-                    android:contentDescription="@string/img_denuncia_description" />
+                    android:contentDescription="@string/btn_text_denuncia" />
 
                 <TextView
                     android:id="@+id/txt_denuncia"
